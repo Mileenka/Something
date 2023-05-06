@@ -67,6 +67,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   background-color: hsl(0deg, 0%, 98%);
@@ -111,14 +112,14 @@ nav {
   cursor: pointer;
 }
 
-/* Backround */
+/* Background */
 .background {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: white;
-  width: 100vw;
+  width: 100%;
   height: 65vh;
   background: url("../images/hack.jpg") center/cover fixed;
 }
@@ -126,7 +127,7 @@ nav {
   content: "";
   position: absolute;
   display: block;
-  width: 100vw;
+  width: 100%;
   height: 65vh;
   background-color: rgba(0, 0, 0, 0.606);
 }
@@ -156,10 +157,6 @@ header h1 span {
   font-weight: 700;
 }
 
-p {
-  color: rgb(40, 40, 36);
-}
-
 /* Section */
 main {
   display: flex;
@@ -172,13 +169,13 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  width: 40rem;
-  height: 30rem;
+  width: 30rem;
+  height: 40rem;
   margin-top: 2.5rem;
   background-color: white;
-  box-shadow: 1rem 1.8rem 2rem rgba(164, 174, 197, 0.324);
   border-top: 4px solid hsl(180deg, 62%, 55%);
-  border-radius: 0.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 1rem 1.8rem 2rem rgba(164, 174, 197, 0.324);
   background-repeat: no-repeat;
   background-size: 5.5rem;
   background-position: 21.8rem 13.5rem;
@@ -251,9 +248,12 @@ strong {
   padding: 3rem;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 40px;
+  border-radius: 1.2rem;
 }
 
-.our-impact, .our-values, .our-partners {
+.our-impact,
+.our-values,
+.our-partners {
   margin-top: 2.5rem;
   font-size: 2.7rem;
   font-weight: bold;
@@ -275,40 +275,45 @@ h3 {
   font-weight: bold;
 }
 
-.stats1, .stats2, .stats3 {
+.stats1,
+.stats2,
+.stats3 {
   padding: 0.6rem;
   font-size: 1.6rem;
 }
 
-.students, .intership-job, .alumni {
+.students,
+.intership-job,
+.alumni {
   display: flex;
   flex-direction: column;
-  width: 35rem;
+  width: 100%;
   height: 10rem;
   margin-top: 3rem;
   background-color: hsl(46deg, 72%, 51%);
+  border-radius: 1.2rem;
 }
 
 /* Our core values */
 .core-values {
+  display: grid;
+  width: 80%;
   margin-top: 5rem;
-  width: 80vw;
   padding: 2rem;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 40px;
+  border-radius: 1.2rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.community, .diversity, .commitment, .open {
-  width: 70%;
+.community,
+.diversity,
+.commitment,
+.open {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 4rem;
+  flex-wrap: wrap;
   font-size: 1.8rem;
   line-height: 2.5rem;
 }
@@ -321,11 +326,12 @@ h4 {
 
 /* Our Partners */
 .partners {
+  width: 80vw;
   padding: 5rem;
   margin-top: 5rem;
-  width: 80vw;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 40px;
+  border-radius: 1.2rem;
 }
 
 .logo-partners {
@@ -343,10 +349,11 @@ h4 {
 .contact-location {
   display: flex;
   align-items: center;
-  width: 75vw;
+  width: 80vw;
   margin-top: 5rem;
   padding: 5rem;
   background-color: white;
+  border-radius: 1.2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 40px;
 }
 
@@ -361,12 +368,11 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(46deg, 72%, 51%);
-  width: 40rem;
-  height: 60rem;
+  width: 100%;
   padding: 2rem;
-  border-radius: 1rem;
+  background-color: hsl(46deg, 72%, 51%);
   line-height: 2.4rem;
+  border-radius: 1rem;
 }
 
 .contact-description {
@@ -385,32 +391,39 @@ form > input {
   margin: 1rem;
 }
 
-textarea {
+.message {
   width: 100%;
   height: 150px;
   padding: 12px 20px;
-  border-radius: 0.5rem;
   background-color: hsl(46deg, 72%, 51%);
   font-size: 16px;
   resize: none;
   border: 1px solid white;
+  border-radius: 0.5rem;
 }
 
 .form-btn {
   width: 15rem;
   height: 4rem;
   margin-top: 2rem;
-  border-style: none;
+  background: rgb(34, 33, 33);
   font-size: 1.7rem;
   letter-spacing: 0.2rem;
-  background: rgb(34, 33, 33);
   color: rgb(236, 236, 236);
   border-radius: 0.5rem;
+  border-style: none;
   cursor: pointer;
 }
 
+.map {
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+
 .map > iframe {
-  margin-left: 5rem;
+  width: 100%;
+  height: 450px;
   border-radius: 4rem;
 }
 
@@ -418,7 +431,7 @@ textarea {
 footer {
   position: relative;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   margin-top: 2rem;
   color: rgb(0, 0, 0);
 }
@@ -444,7 +457,17 @@ footer {
   height: 3.5rem;
 }
 
-@media all and (min-width: 950px) {
+@media screen and (max-width: 850px) {
+  .map {
+    margin-top: 3rem;
+    padding-left: initial;
+    padding-right: initial;
+  }
+  .contact-location {
+    flex-direction: column;
+  }
+}
+@media all and (min-width: 850px) {
   body {
     max-height: 100vh;
   }
@@ -454,9 +477,6 @@ footer {
   .nav-button {
     width: 15rem;
   }
-  header {
-    max-width: 1440px;
-  }
   header h1 {
     max-width: 465px;
     line-height: 4.8rem;
@@ -465,23 +485,22 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
   }
   section {
     width: 40rem;
-    height: 30rem;
+    height: 40rem;
     background-size: 6rem;
-    background-position: 25.5rem 15rem;
   }
   .midlle-sections {
     margin: 0 2.5rem;
   }
-  .students, .intership-job, .alumni {
-    display: inline-block;
-    margin-left: 3rem;
-    height: 10rem;
-  }
   .h3 {
     font-size: 20rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
