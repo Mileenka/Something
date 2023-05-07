@@ -130,7 +130,7 @@ section {
 
   .about {
     position: absolute;
-    top: 5.5rem;
+    top: 8rem;
     left: 2.6rem;
     padding-right: 2rem;
     font-size: 1.6rem;
@@ -186,7 +186,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 90%;
   margin-top: 5rem;
   padding: 3rem;
   background-color: white;
@@ -241,7 +241,7 @@ h3 {
 
 .core-values {
   display: grid;
-  width: 80%;
+  width: 90%;
   margin-top: 5rem;
   padding: 2rem;
   background-color: white;
@@ -271,7 +271,7 @@ h4 {
 /* Our Partners */
 
 .partners {
-  width: 80vw;
+  width: 90%;
   padding: 5rem;
   margin-top: 5rem;
   background-color: white;
@@ -296,9 +296,9 @@ h4 {
 .contact-location {
   display: flex;
   align-items: center;
-  width: 80vw;
+  width: 90%;
   margin-top: 5rem;
-  padding: 5rem;
+  padding: 2rem;
   background-color: white;
   border-radius: 1.2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 40px;
@@ -306,6 +306,7 @@ h4 {
 
 
 form {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,7 +387,7 @@ footer {
   color: rgb(0, 0, 0);
 }
 
-.adress {
+.address {
   width: 20rem;
   display: flex;
   text-align: center;
@@ -407,7 +408,9 @@ footer {
   height: 3.5rem;
 }
 
-@media screen and (max-width: 850px) {
+
+
+@media screen and (max-width: 750px) {
   .map {
     margin-top: 3rem;
     padding-left: initial;
@@ -447,15 +450,22 @@ footer {
   }
 
   section {
-    width: 40rem;
-    height: 40rem;
-    background-size: 6rem;
+    width: min(100%, 40rem);
+    height: 43.5rem;
+    // background-size: 6rem;
     // min-height: 30rem;
     // background-position: (25.5rem 15rem);
   }
 
-  .midlle-sections {
+  .volunteer {
+    margin-left: 2rem;
+  }
+
+  .middle-sections {
+    width: min(100%, 40rem);
     margin: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .h3 {
@@ -465,5 +475,19 @@ footer {
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    max-width: 60%;
+  }
+
+  .map {
+    margin-left: 3rem;
+    padding-left: initial;
+    padding-right: initial;
+  }
+
+  .statistic, .core-values, .partners, .contact-location {
+    width: 80%;
   }
 }
